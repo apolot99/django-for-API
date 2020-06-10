@@ -151,7 +151,11 @@
 
 # a web API is a collection of endpoints that expose certain parts of an underlying database. 
 
-#  As developers we control the URLs for each endpoint, what underlying data is available, and what actions are possible via HTTP verbs
+# As developers we control the URLs for each endpoint, what underlying data is available, and what actions are possible via HTTP verbs
+
+# We cannot build a web API with only Django Rest Framework; it always must be added to a project after Django itself has been installed and configured.
+# Django creates websites containing webpages
+# Django REST Framework creates web APIs which are a collection of URL endpoints containing available HTTP verbs that return JSON.
 
 
 
