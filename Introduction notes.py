@@ -157,6 +157,55 @@
 # Django creates websites containing webpages
 # Django REST Framework creates web APIs which are a collection of URL endpoints containing available HTTP verbs that return JSON.
 
+# A traditional Django website consists of a single project and one (or more) apps representing discrete functionality
+
+#  __init__.py is a Python way to treat a directory as a package; it is empty
+#      Each app has a __init__.py file identifying it as a Python package 
+#  settings.py contains all the configuration for our project 
+#  urls.py controls the top-level URL routes
+#  wsgi.py stands for web server gateway interface and helps Django serve the eventual web pages 
+#  manage.py executes various Django commands such as running the local web server or creating a new app.
+
+# We run migrate to sync the data base with Django’s default settings
+
+# admin.py is a configuration file for the built-in Django Admin app 
+# apps.py is a configuration file for the app itself
+# the migrations/ directory stores migrations files for database changes
+# models.py is where we define our database models 
+# tests.py is for our app-specific tests
+# views.py is where we handle the request/response logic for our web app
+
+# Typically developers will also create an urls.py file within each app too for routing.
+
+# We always add new apps at the bottom since Django will read them in order and we want the built-in core Django apps like admin and auth to already be loaded before it loads ours.
+
+# Each web page in traditional Django requires several files: a view, url, and template. But first we need a database model 
+
+# We include a __str__ method in the models so that the title of a book will display in the admin later on.
+
+# Inorder to expose it as a web page we need to create views, URLs, and template files. 
+
+# views.py file controls how the data base model content is displayed
+
+# template file controls the lay out the actual web page.
+
+# Django REST Framework is added just like any other third-party app
+
+# The api app will not have its own database models 
+# so there is no need to create a migration file and update the database as we normally would.
+
+# A serializer translates data into a format that is easy to consume over the internet, typically JSON, 
+# and is displayed at an API endpoint
+
+# Since we are not bothering to build out web pages for this project, there is no need for website URLs,views,ortemplates.
+#All we need is a model and Django REST Framework will take care of the rest.
+
+#  the implicit default settings are designed so that developers can jump in and start working quickly in a local development environment.
+# The default settings are not appropriate for production though.
+# So typically we will make a number of changes to them over the course of a project
+
+#  we will update three files that are Django REST Framework specific to transform our database model into a web API: urls.py, views.py, and serializers.py
+
 
 
 
