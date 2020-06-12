@@ -206,8 +206,14 @@
 
 #  we will update three files that are Django REST Framework specific to transform our database model into a web API: urls.py, views.py, and serializers.py
 
+# URLs the entry-point for our API end points. 
 
+#  with Django REST Frame work we need to add a serializers.py file and we do not need a templates file
 
+# Whenever a client interacts with an API hosted on a different domain (mysite.com vs yoursite.com) or port (localhost:3000 vs localhost:8000) there are potential security issues.
+# CORS( Cross-Origin Resource Sharing) requires the server to include specific HTTP headers that allow for the client to determine if and when cross-domain requests should be allowed.
+
+# An API exists to communicate with another program
 
 
 
